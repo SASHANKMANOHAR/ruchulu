@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Clay pot - representing village cooking -->
+  <ellipse cx="100" cy="160" rx="70" ry="25" fill="#8B4513" />
+  <path d="M40 80 Q50 50 100 40 Q150 50 160 80 L160 140 Q150 170 100 180 Q50 170 40 140 Z" fill="#A52A2A" />
+  <ellipse cx="100" cy="70" rx="55" ry="25" fill="#8B4513" />
+  
+  <!-- Flames/steam - representing cooking -->
+  <path d="M80 40 Q90 20 100 35 Q110 20 120 35 Q110 15 100 25 Q90 15 80 40" fill="#D2691E" />
+  
+  <!-- decorative elements - village patterns -->
+  <circle cx="70" cy="100" r="5" fill="#F5F5DC" />
+  <circle cx="130" cy="100" r="5" fill="#F5F5DC" />
+  <path d="M85 130 Q100 140 115 130" stroke="#F5F5DC" stroke-width="2" fill="none" />
+  
+  <!-- Text path around the pot -->
+  <path id="textPath" d="M40 110 Q50 150 100 160 Q150 150 160 110" fill="none" />
+  <text>
+    <textPath href="#textPath" font-family="Satisfy, cursive" font-size="14" fill="#F5F5DC" startOffset="33%">Mana Orru Ruchulu</textPath>
+  </text>
+  
+  <!-- Wheat stalks - representing village agriculture -->
+  <g transform="translate(30,50) rotate(-20)">
+    <path d="M0 0 L15 -25" stroke="#DAA520" stroke-width="1.5" />
+    <path d="M5 -5 L0 -10" stroke="#DAA520" stroke-width="1" />
+    <path d="M7 -10 L2 -15" stroke="#DAA520" stroke-width="1" />
+    <path d="M10 -15 L5 -20" stroke="#DAA520" stroke-width="1" />
+  </g>
+  <g transform="translate(170,50) rotate(20)">
+    <path d="M0 0 L-15 -25" stroke="#DAA520" stroke-width="1.5" />
+    <path d="M-5 -5 L0 -10" stroke="#DAA520" stroke-width="1" />
+    <path d="M-7 -10 L-2 -15" stroke="#DAA520" stroke-width="1" />
+    <path d="M-10 -15 L-5 -20" stroke="#DAA520" stroke-width="1" />
+  </g>
+</svg>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana Orru Ruchulu - Authentic Village Cuisine</title>
+    <meta name="description" content="Experience authentic village cuisine at Mana Orru Ruchulu - a restaurant that brings the flavors and atmosphere of traditional village cooking to you.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.svg" alt="Mana Orru Ruchulu Logo" class="logo">
+                <h1>Mana Orru Ruchulu</h1>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Traditional Village Flavors</h2>
+                <p>Experience the authentic taste of rural cuisine prepared with traditional methods and recipes passed down through generations.</p>
+                <div class="cta-buttons">
+                    <a href="#menu" class="btn primary-btn">Explore Our Menu</a>
+                    <a href="#contact" class="btn secondary-btn">Reserve a Table</a>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="decoration-item pot"></div>
+                <div class="decoration-item lamp"></div>
+                <div class="decoration-item leaves"></div>
+            </div>
+        </section>
+
+        <!-- Special Highlights -->
+        <section class="highlights-section">
+            <div class="highlights-container">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Traditional Cooking</h3>
+                    <p>Prepared in clay pots over wood fire following ancestral recipes</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Organic Ingredients</h3>
+                    <p>Fresh produce sourced from local farmers and our own garden</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Village Atmosphere</h3>
+                    <p>Dine in an authentic village setting with traditional decorations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Authentic recipes from the heart of the village</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">All</button>
+                <button class="menu-tab" data-category="breakfast">Breakfast</button>
+                <button class="menu-tab" data-category="mains">Main Course</button>
+                <button class="menu-tab" data-category="desserts">Desserts</button>
+                <button class="menu-tab" data-category="beverages">Beverages</button>
+            </div>
+
+            <div class="menu-items-container">
+                <!-- Breakfast Items -->
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-info">
+                        <h3>Dosa with Chutney</h3>
+                        <p>Traditional rice and lentil crepe served with coconut chutney and sambar</p>
+                        <span class="price">₹120</span>
+                    </div>
+                    <div class="menu-item-image dosa-img"></div>
+                </div>
+
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-info">
+                        <h3>Idli Platter</h3>
+                        <p>Steamed rice cakes served with spicy chutney and traditional sambar</p>
+                        <span class="price">₹100</span>
+                    </div>
+                    <div class="menu-item-image idli-img"></div>
+                </div>
+
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-info">
+                        <h3>Pesarattu</h3>
+                        <p>Green gram dosa served with ginger chutney and upma</p>
+                        <span class="price">₹140</span>
+                    </div>
+                    <div class="menu-item-image pesarattu-img"></div>
+                </div>
+
+                <!-- Main Course Items -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-info">
+                        <h3>Ragi Sangati with Natu Kodi Kura</h3>
+                        <p>Finger millet balls served with country chicken curry</p>
+                        <span class="price">₹220</span>
+                    </div>
+                    <div class="menu-item-image ragi-sangati-img"></div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-info">
+                        <h3>Gongura Mamsam</h3>
+                        <p>Tender mutton cooked with tangy sorrel leaves</p>
+                        <span class="price">₹260</span>
+                    </div>
+                    <div class="menu-item-image gongura-img"></div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-info">
+                        <h3>Gutti Vankaya Kura</h3>
+                        <p>Stuffed eggplant curry with traditional spices</p>
+                        <span class="price">₹180</span>
+                    </div>
+                    <div class="menu-item-image vankaya-img"></div>
+                </div>
+
+                <!-- Dessert Items -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-info">
+                        <h3>Ariselu</h3>
+                        <p>Traditional sweet made with rice flour and jaggery</p>
+                        <span class="price">₹100</span>
+                    </div>
+                    <div class="menu-item-image ariselu-img"></div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-info">
+                        <h3>Pootharekulu</h3>
+                        <p>Paper-thin sweet layers stuffed with sugar and ghee</p>
+                        <span class="price">₹120</span>
+                    </div>
+                    <div class="menu-item-image pootharekulu-img"></div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item" data-category="beverages">
+                    <div class="menu-item-info">
+                        <h3>Nimmakaya Sharbat</h3>
+                        <p>Traditional lemon drink with mint and spices</p>
+                        <span class="price">₹60</span>
+                    </div>
+                    <div class="menu-item-image nimmakaya-img"></div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <div class="menu-item-info">
+                        <h3>Ragi Malt</h3>
+                        <p>Nutritious finger millet drink with jaggery</p>
+                        <span class="price">₹80</span>
+                    </div>
+                    <div class="menu-item-image ragi-malt-img"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <p>The journey from village kitchens to your plate</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <h3>Bringing Village Flavors to the City</h3>
+                    <p>Mana Orru Ruchulu started with a simple dream - to preserve and share the authentic flavors of village cuisine with the world. Our founder, Smt. Lakshmi, grew up in a small village where meals were cooked on wood fires in clay pots, using ingredients grown in their own backyard.</p>
+                    <p>When she moved to the city, she missed those flavors and the warmth of village cooking. In 2005, she opened a small eatery serving dishes from her childhood, prepared the traditional way. The response was overwhelming, and over the years, Mana Orru Ruchulu has grown into a beloved restaurant while maintaining the authenticity of village cooking.</p>
+                    <p>Today, we continue to serve dishes prepared with recipes passed down through generations. We source our ingredients from local farmers and our own organic garden, ensuring the flavors remain as authentic as possible.</p>
+
+                    <div class="values">
+                        <div class="value-item">
+                            <i class="fas fa-thumbs-up"></i>
+                            <h4>Authenticity</h4>
+                            <p>We never compromise on traditional methods</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Passion</h4>
+                            <p>Every dish is prepared with love and care</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-seedling"></i>
+                            <h4>Sustainability</h4>
+                            <p>Supporting local farmers and organic practices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>A visual journey through our village-themed restaurant and culinary creations</p>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-item gallery-img1">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Dining Area</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-img2">
+                    <div class="gallery-overlay">
+                        <h3>Clay Pot Cooking</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-img3">
+                    <div class="gallery-overlay">
+                        <h3>Bamboo Seating</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-img4">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Thali</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-img5">
+                    <div class="gallery-overlay">
+                        <h3>Village Kitchen</h3>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-img6">
+                    <div class="gallery-overlay">
+                        <h3>Handmade Sweets</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2>Visit Us</h2>
+                <p>We'd love to serve you our village delicacies</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>123 Culinary Street, Jubilee Hills</p>
+                        <p>Hyderabad, Telangana 500033</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Hours</h3>
+                        <p><strong>Mon-Thu:</strong> 11:00 AM - 10:00 PM</p>
+                        <p><strong>Fri-Sun:</strong> 11:00 AM - 11:00 PM</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Contact</h3>
+                        <p>Phone: +91 98765 43210</p>
+                        <p>Email: info@manaorruruchulu.com</p>
+                    </div>
+                </div>
+
+                <div class="reservation-form">
+                    <h3>Reserve Your Table</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Select</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6+">6+ People</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Reserve Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="section-header">
+                <h2>What Our Guests Say</h2>
+                <p>Experiences shared by our valued customers</p>
+            </div>
+
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">The most authentic village food I've had in the city! The ambiance takes me back to my grandmother's village. Ragi Sangati with Natu Kodi Kura is exactly how we used to have it back home.</p>
+                    <div class="testimonial-author">
+                        <h4>Ramachandra Rao</h4>
+                        <p>Food Enthusiast</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">As someone who grew up in a city, this restaurant gave me a taste of village life. The clay pot cooking adds a unique flavor that you can't find elsewhere. A true culinary journey!</p>
+                    <div class="testimonial-author">
+                        <h4>Priya Sharma</h4>
+                        <p>Regular Customer</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">The bamboo seating, clay lamps, and village decor create such an immersive experience. I brought my foreign colleagues here and they were amazed by the authentic rural atmosphere and flavors.</p>
+                    <div class="testimonial-author">
+                        <h4>Vijay Kumar</h4>
+                        <p>Business Professional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.svg" alt="Mana Orru Ruchulu Logo">
+                <h3>Mana Orru Ruchulu</h3>
+                <p>Authentic Village Cuisine</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <p><span>Mon-Thu:</span> 11:00 AM - 10:00 PM</p>
+                <p><span>Fri-Sun:</span> 11:00 AM - 11:00 PM</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Mana Orru Ruchulu. All Rights Reserved.</p>
+            <p>123 Culinary Street, Jubilee Hills, Hyderabad, Telangana 500033</p>
+        </div>
+    </footer>
+
+    <!-- Reservation Confirmation Modal -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Reservation Confirmed!</h3>
+            <p>Thank you for choosing Mana Orru Ruchulu. We have received your reservation request and will confirm it shortly via email or phone.</p>
+            <div id="reservation-details">
+                <!-- Reservation details will be inserted here by JavaScript -->
+            </div>
+            <button class="btn primary-btn close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

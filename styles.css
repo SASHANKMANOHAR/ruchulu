@@ -1,0 +1,1090 @@
+/* Base Styles & Variables */
+:root {
+    --primary-color: #8B4513; /* Brown - earthy tone */
+    --secondary-color: #D2691E; /* Chocolate */
+    --accent-color: #556B2F; /* Olive green */
+    --light-accent: #A9A9A9; /* Light background */
+    --text-dark: #3A3A3A;
+    --text-light: #F5F5DC; /* Beige - for contrast on dark backgrounds */
+    --background-light: #F5F5DC; /* Beige - earthy background */
+    --background-dark: #3A3A3A;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --container-padding: 4rem 2rem;
+    --card-padding: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2691e' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Satisfy', cursive;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: var(--container-padding);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    transform: translateY(-3px);
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    display: inline-block;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.section-header p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 248, 220, 0.95);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
+.logo-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23555555'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: var(--background-dark);
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    z-index: 5;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.decoration-item {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.4;
+}
+
+.pot {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    left: 10%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M35,30 C30,30 25,35 25,40 L25,80 C25,85 35,90 50,90 C65,90 75,85 75,80 L75,40 C75,35 70,30 65,30 Z' fill='%23A52A2A'/%3E%3Cpath d='M35,30 L65,30 L65,20 C65,15 60,10 50,10 C40,10 35,15 35,20 Z' fill='%23A52A2A'/%3E%3C/svg%3E");
+}
+
+.lamp {
+    width: 120px;
+    height: 180px;
+    top: 10%;
+    right: 15%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'%3E%3Cpath d='M40,50 C40,30 60,30 60,50 L60,100 L40,100 Z' fill='%23D2691E'/%3E%3Cellipse cx='50' cy='50' rx='20' ry='10' fill='%23FFA500'/%3E%3Cpath d='M45,100 L55,100 L55,130 L45,130 Z' fill='%238B4513'/%3E%3Cellipse cx='50' cy='130' rx='10' ry='5' fill='%238B4513'/%3E%3C/svg%3E");
+}
+
+.leaves {
+    width: 200px;
+    height: 200px;
+    bottom: 15%;
+    right: 5%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,10 C30,10 10,30 10,50 C10,70 50,90 50,90 C50,90 90,70 90,50 C90,30 70,10 50,10 Z' fill='%23556B2F'/%3E%3C/svg%3E");
+}
+
+/* Highlights Section */
+.highlights-section {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 4rem 2rem;
+}
+
+.highlights-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.highlight-card {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.highlight-card h3 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.highlight-card p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: var(--background-light);
+    padding: 6rem 2rem;
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.menu-tab {
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.menu-tab:hover,
+.menu-tab.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.menu-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Menu Item Images with Village Theme */
+.dosa-img {
+    background: url("images/menu/dosa.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.idli-img {
+    background: url("images/menu/idli.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.pesarattu-img {
+    background: url("images/menu/pesarattu.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.ragi-sangati-img {
+    background: url("images/menu/ragi-sangati.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.gongura-img {
+    background: url("images/menu/gongura-mamsam.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.vankaya-img {
+    background: url("images/menu/gutti-vankaya.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.ariselu-img {
+    background: url("images/menu/ariselu.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.pootharekulu-img {
+    background: url("images/menu/pootharekulu.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.nimmakaya-img {
+    background: url("images/menu/nimmakaya-sharbat.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.ragi-malt-img {
+    background: url("images/menu/ragi-malt.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-item-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-info p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    align-self: flex-end;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--background-light);
+    padding: 6rem 2rem;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23A52A2A' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23A52A2A'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: var(--primary-color);
+    background-position: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.value-item {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.value-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.value-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 6rem 2rem;
+}
+
+.gallery-section .section-header h2 {
+    color: var(--text-light);
+}
+
+.gallery-section .section-header p {
+    color: var(--text-light);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    height: 250px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+    color: var(--text-light);
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+/* Gallery Item SVG Images with Village Theme */
+.gallery-img1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f5f5dc'/%3E%3C!-- Traditional hut --!%3E%3Cpath d='M150,150 L250,150 L250,220 L150,220 Z' fill='%23cd853f'/%3E%3Cpath d='M140,150 L260,150 L200,100 Z' fill='%238b4513'/%3E%3C!-- Door --!%3E%3Cpath d='M180,175 L220,175 L220,220 L180,220 Z' fill='%23a52a2a'/%3E%3C!-- Windows --!%3E%3Crect x='160' y='160' width='15' height='15' fill='%23f5f5dc'/%3E%3Crect x='225' y='160' width='15' height='15' fill='%23f5f5dc'/%3E%3C!-- Decoration --!%3E%3Cpath d='M140,150 L260,150' stroke='%238b4513' stroke-width='3'/%3E%3C!-- Clay pots --!%3E%3Cellipse cx='130' cy='220' rx='15' ry='10' fill='%23a52a2a'/%3E%3Cellipse cx='270' cy='220' rx='15' ry='10' fill='%23a52a2a'/%3E%3C!-- Ground --!%3E%3Cpath d='M0,220 L400,220 L400,300 L0,300 Z' fill='%238b4513'/%3E%3C!-- Trees --!%3E%3Cpath d='M50,180 L70,180 L60,130 Z' fill='%23556b2f'/%3E%3Crect x='58' y='180' width='4' height='40' fill='%238b4513'/%3E%3Cpath d='M330,170 L350,170 L340,120 Z' fill='%23556b2f'/%3E%3Crect x='338' y='170' width='4' height='50' fill='%238b4513'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-img2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23a52a2a'/%3E%3C!-- Large clay pot --!%3E%3Cpath d='M150,80 Q150,50 200,50 Q250,50 250,80 L250,180 Q220,210 180,210 Q140,210 150,180 Z' fill='%23cd853f'/%3E%3Cellipse cx='200' cy='80' rx='50' ry='20' fill='%238b4513'/%3E%3C!-- Fire --!%3E%3Cpath d='M170,200 L230,200 L220,240 L180,240 Z' fill='%23daa520'/%3E%3Cpath d='M185,200 Q200,170 215,200' stroke='%23ff4500' stroke-width='3' fill='none'/%3E%3Cpath d='M175,180 Q200,140 225,180' stroke='%23ff0000' stroke-width='4' fill='none'/%3E%3C!-- Village background --!%3E%3Cpath d='M0,250 L400,250 L400,300 L0,300 Z' fill='%238b4513'/%3E%3Cpath d='M20,250 L50,220 L80,250' fill='%23556b2f'/%3E%3Cpath d='M320,250 L350,220 L380,250' fill='%23556b2f'/%3E%3C!-- Small decorations on the pot --!%3E%3Cpath d='M170,120 L230,120 M170,140 L230,140' stroke='%238b4513' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-img3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23556b2f'/%3E%3C!-- Bamboo styling --!%3E%3Crect x='100' y='50' width='20' height='200' fill='%236b8e23'/%3E%3Crect x='150' y='70' width='20' height='180' fill='%236b8e23'/%3E%3Crect x='200' y='60' width='20' height='190' fill='%236b8e23'/%3E%3Crect x='250' y='80' width='20' height='170' fill='%236b8e23'/%3E%3C!-- Bamboo joints --!%3E%3Crect x='95' y='100' width='30' height='5' fill='%238b4513'/%3E%3Crect x='95' y='150' width='30' height='5' fill='%238b4513'/%3E%3Crect x='95' y='200' width='30' height='5' fill='%238b4513'/%3E%3Crect x='145' y='120' width='30' height='5' fill='%238b4513'/%3E%3Crect x='145' y='170' width='30' height='5' fill='%238b4513'/%3E%3Crect x='145' y='220' width='30' height='5' fill='%238b4513'/%3E%3Crect x='195' y='110' width='30' height='5' fill='%238b4513'/%3E%3Crect x='195' y='160' width='30' height='5' fill='%238b4513'/%3E%3Crect x='195' y='210' width='30' height='5' fill='%238b4513'/%3E%3Crect x='245' y='130' width='30' height='5' fill='%238b4513'/%3E%3Crect x='245' y='180' width='30' height='5' fill='%238b4513'/%3E%3Crect x='245' y='230' width='30' height='5' fill='%238b4513'/%3E%3C!-- Ground --!%3E%3Cpath d='M0,250 L400,250 L400,300 L0,300 Z' fill='%238b4513'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-img4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d2691e'/%3E%3C!-- Traditional thali plate --!%3E%3Cpath d='M80,100 A130,60 0 0 1 320,100 A130,60 0 0 1 80,100 Z' fill='%23a52a2a'/%3E%3Cellipse cx='200' cy='100' rx='100' ry='40' fill='%23cd853f'/%3E%3C!-- Food items on thali --!%3E%3Ccircle cx='160' cy='90' r='20' fill='%23fff'/%3E%3Ccircle cx='200' cy='90' r='20' fill='%23fff'/%3E%3Ccircle cx='240' cy='90' r='20' fill='%23fff'/%3E%3Crect x='130' y='120' width='20' height='20' rx='2' fill='%23556b2f'/%3E%3Crect x='160' y='120' width='20' height='20' rx='2' fill='%238b0000'/%3E%3Crect x='190' y='120' width='20' height='20' rx='2' fill='%23f5f5dc'/%3E%3Crect x='220' y='120' width='20' height='20' rx='2' fill='%23daa520'/%3E%3Crect x='250' y='120' width='20' height='20' rx='2' fill='%236b8e23'/%3E%3C!-- Traditional leaf underneath --!%3E%3Cpath d='M80,170 Q200,200 320,170 L320,200 L80,200 Z' fill='%23556b2f'/%3E%3C!-- Background --!%3E%3Cpath d='M0,200 L400,200 L400,300 L0,300 Z' fill='%238b4513'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-img5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23cd853f'/%3E%3C!-- Traditional village kitchen --!%3E%3C!-- Mud stove --!%3E%3Cpath d='M80,150 L180,150 L170,200 L90,200 Z' fill='%238b4513'/%3E%3Crect x='100' y='130' width='60' height='20' fill='%23a52a2a'/%3E%3C!-- Cooking fire --!%3E%3Cpath d='M115,130 Q130,90 145,130' stroke='%23ff4500' stroke-width='3' fill='none'/%3E%3Cpath d='M110,120 Q130,70 150,120' stroke='%23ff0000' stroke-width='4' fill='none'/%3E%3C!-- Cooking pots --!%3E%3Cpath d='M240,130 Q260,110 280,130 L280,170 Q260,180 240,170 Z' fill='%23a52a2a'/%3E%3Cellipse cx='260' cy='130' rx='20' ry='8' fill='%238b4513'/%3E%3Cpath d='M300,160 Q320,140 340,160 L340,190 Q320,200 300,190 Z' fill='%23a52a2a'/%3E%3Cellipse cx='320' cy='160' rx='20' ry='8' fill='%238b4513'/%3E%3C!-- Wood pile --!%3E%3Crect x='210' y='180' width='80' height='5' rx='2' fill='%238b4513'/%3E%3Crect x='220' y='185' width='60' height='5' rx='2' fill='%238b4513'/%3E%3Crect x='215' y='190' width='70' height='5' rx='2' fill='%238b4513'/%3E%3Crect x='225' y='195' width='60' height='5' rx='2' fill='%238b4513'/%3E%3C!-- Background --!%3E%3Cpath d='M0,210 L400,210 L400,300 L0,300 Z' fill='%238b4513'/%3E%3C!-- Utensils hanging --!%3E%3Cpath d='M35,50 L35,130 M35,50 L80,90' stroke='%238b4513' stroke-width='2' fill='none'/%3E%3Cellipse cx='80' cy='90' rx='15' ry='5' fill='%23a52a2a'/%3E%3Cpath d='M35,50 L60,70' stroke='%238b4513' stroke-width='2' fill='none'/%3E%3Crect x='55' y='65' width='10' height='40' rx='2' fill='%23a52a2a'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-img6 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23b8860b'/%3E%3C!-- Traditional village sweets making --!%3E%3C!-- Sweet making table --!%3E%3Crect x='80' y='120' width='240' height='20' fill='%238b4513'/%3E%3Crect x='90' y='140' width='10' height='60' fill='%238b4513'/%3E%3Crect x='300' y='140' width='10' height='60' fill='%238b4513'/%3E%3C!-- Sweet shapes --!%3E%3Ccircle cx='130' cy='100' r='15' fill='%23daa520'/%3E%3Ccircle cx='170' cy='100' r='15' fill='%23daa520'/%3E%3Ccircle cx='210' cy='100' r='15' fill='%23daa520'/%3E%3Ccircle cx='250' cy='100' r='15' fill='%23daa520'/%3E%3C!-- Different shape sweets --!%3E%3Crect x='120' y='140' width='20' height='20' rx='2' fill='%23daa520'/%3E%3Crect x='150' y='140' width='20' height='20' rx='2' fill='%23daa520'/%3E%3Crect x='180' y='140' width='20' height='20' rx='2' fill='%23daa520'/%3E%3Cpath d='M230,140 L250,140 L240,160 Z' fill='%23daa520'/%3E%3Cpath d='M260,140 L280,140 L270,160 Z' fill='%23daa520'/%3E%3C!-- Jaggery and ingredients --!%3E%3Crect x='120' y='80' width='40' height='10' fill='%23a0522d'/%3E%3Ccircle cx='320' cy='80' r='20' fill='%23a0522d'/%3E%3Cellipse cx='320' cy='80' rx='15' ry='5' fill='%238b4513'/%3E%3C!-- Background --!%3E%3Cpath d='M0,200 L400,200 L400,300 L0,300 Z' fill='%238b4513'/%3E%3C!-- Hands making sweets --!%3E%3Cpath d='M50,100 Q70,90 90,100' stroke='%23cd853f' stroke-width='4' fill='none'/%3E%3Cpath d='M45,110 Q65,100 85,110' stroke='%23cd853f' stroke-width='4' fill='none'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--background-light);
+    padding: 6rem 2rem;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    margin-bottom: 0.5rem;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+.reservation-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.reservation-form h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 6rem 2rem;
+}
+
+.testimonials-section .section-header h2 {
+    color: var(--text-light);
+}
+
+.testimonials-section .section-header p {
+    color: var(--text-light);
+}
+
+.testimonials-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: serif;
+}
+
+.testimonial-text {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.testimonial-author h4 {
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-author p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding-top: 4rem;
+}
+
+.footer-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.footer-logo h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    opacity: 0.8;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links h4,
+.footer-hours h4,
+.footer-social h4 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links ul li a {
+    color: var(--text-light);
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-links ul li a:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+.footer-hours {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-hours p {
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+}
+
+.footer-hours p span {
+    font-weight: 700;
+    opacity: 1;
+    margin-right: 0.5rem;
+}
+
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: var(--background-light);
+    margin: 10% auto;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.modal-icon {
+    font-size: 4rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+#reservation-details {
+    text-align: left;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+}
+
+#reservation-details p {
+    margin-bottom: 0.5rem;
+}
+
+.close-btn {
+    margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--background-light);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: var(--transition);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --container-padding: 3rem 1.5rem;
+        --card-padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .logo-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .menu-tabs {
+        gap: 0.5rem;
+    }
+
+    .menu-tab {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Animation delay classes */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
